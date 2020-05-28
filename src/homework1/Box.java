@@ -37,7 +37,7 @@ public class Box<T extends Fruit> {
 
     public Box<T> pourIntoThisBox(Box<T> box){
         this.getArrayList().addAll(box.getArrayList());
-        this.setWeight(box.getWeight());
+        this.setWeight(this.getWeight() + box.getWeight());
         box.getArrayList().clear();
         box.setWeight(0);
         return this;
